@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/* Custom theme tokens — Tailwind v4 CSS-first configuration           */
+/* These @theme rules generate bg-*, text-*, border-* utilities        */
+/* ------------------------------------------------------------------ */
+@theme {
+  --color-midnight-emerald: #0D2B1F;
+  --color-warm-charcoal: #1C1C1A;
+  --color-soft-grey: #F0F0EE;
+  --color-warm-ivory: #FAF8F3;
+  --color-pure-white: #FFFFFF;
+  --color-bronze-accent: #A0784A;
+  --color-bronze-light: #C4976A;
+  --color-charcoal-text: #2C2C2A;
+
+  --font-family-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  --font-family-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
+}
+
+/* Legacy CSS variable aliases kept for any inline style references */
+:root {
+  --midnight-emerald: #0D2B1F;
+  --warm-charcoal: #1C1C1A;
+  --soft-grey: #F0F0EE;
+  --warm-ivory: #FAF8F3;
+  --pure-white: #FFFFFF;
+  --bronze-accent: #A0784A;
+  --bronze-light: #C4976A;
+  --charcoal-text: #2C2C2A;
+  /* Aliases for inline styles */
+  --font-playfair-display: var(--font-playfair, 'Playfair Display');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF8F3;
+  color: #2C2C2A;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll-logos 30s linear infinite;
+  width: max-content;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
