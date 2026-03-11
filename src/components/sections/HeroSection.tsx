@@ -137,9 +137,14 @@ export default function HeroSection({ profile }: { profile: Profile }) {
           </p>
 
           {/* Pills */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', margin: '0 0 1.75rem 0' }}>
-            {pills.map(p => (
-              <span key={p} style={{ fontFamily: 'var(--font-inter)', fontSize: '0.62rem', padding: '5px 12px', border: `1px solid rgba(160,120,74,0.3)`, color: C.bronzeLight, backgroundColor: 'rgba(160,120,74,0.05)', borderRadius: '9999px', letterSpacing: '0.04em' }}>{p}</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.6rem', margin: '0 0 1.75rem 0' }}>
+            {pills.map((p, i) => (
+              <div key={p} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.68rem', color: C.bronzeLight, fontWeight: 500, letterSpacing: '0.04em' }}>{p}</span>
+                {i < pills.length - 1 && (
+                  <span style={{ color: 'rgba(160, 120, 74, 0.4)', fontSize: '0.8rem' }}>·</span>
+                )}
+              </div>
             ))}
           </div>
 
@@ -216,10 +221,15 @@ export default function HeroSection({ profile }: { profile: Profile }) {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, ease: 'easeOut', delay: 0.45 }}
-            style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', margin: '0 0 2.5rem 0' }}
+            style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.75rem', margin: '0 0 2.5rem 0' }}
           >
-            {pills.map(p => (
-              <span key={p} style={{ fontFamily: 'var(--font-inter)', fontSize: '0.7rem', padding: '7px 16px', border: `1px solid rgba(160,120,74,0.3)`, color: C.bronzeLight, backgroundColor: 'rgba(160,120,74,0.04)', borderRadius: '9999px', letterSpacing: '0.04em' }}>{p}</span>
+            {pills.map((p, i) => (
+              <div key={p} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.75rem', color: C.bronzeLight, fontWeight: 500, letterSpacing: '0.04em' }}>{p}</span>
+                {i < pills.length - 1 && (
+                  <span style={{ color: 'rgba(160, 120, 74, 0.4)', fontSize: '1rem' }}>·</span>
+                )}
+              </div>
             ))}
           </motion.div>
 

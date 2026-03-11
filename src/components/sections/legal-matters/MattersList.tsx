@@ -11,7 +11,7 @@ function derivePracticeArea(id: string) {
         case 'judiciary-resolution-rate': return 'Governance'
         case 'apsea-governance': return 'Policy Reform'
         case 'kazi-advocates-cost-reduction': return 'Litigation'
-        case 'career-architecture': return 'Multi-Practice'
+        case 'aluso-ingati-associates': return 'Multi-Practice'
         default: return 'Practice Area'
     }
 }

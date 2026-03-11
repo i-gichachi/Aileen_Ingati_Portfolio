@@ -194,7 +194,7 @@ export default function CounselSnapshot() {
 
                     <motion.a
                         variants={itemVariants}
-                        href="/files/aileen-ingati-cv.pdf"
+                        href="/documents/aileen-ingati-cv.pdf"
                         download
                         whileHover={{ scale: 1.04, backgroundColor: '#8C683F' }}
                         whileTap={{ scale: 0.97 }}
