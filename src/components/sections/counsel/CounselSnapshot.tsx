@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import NextImage from 'next/image'
 
 const PILLS = ['LLB', 'LLM (IP)', 'Patent Agent KIPI', 'IP Agent ARIPO', 'WIPO IAP Specialist', 'Courtroom Mail 100 2022']
 
@@ -111,30 +112,20 @@ export default function CounselSnapshot() {
                         className="hidden md:flex flex-col items-center justify-center shrink-0 relative overflow-hidden"
                         style={{
                             float: 'right',
-                            width: '200px',
-                            height: '270px',
+                            width: '240px',
+                            height: '320px',
                             marginLeft: '2rem',
                             marginBottom: '1rem',
-                            background: 'linear-gradient(160deg, #0f3324 0%, #0D2B1F 60%, #091f17 100%)',
                             borderRadius: '6px',
                             border: '1px solid rgba(160, 120, 74, 0.25)',
                         }}
                     >
-                        {/* Subtle shimmer effect inside the portrait */}
-                        <motion.div
-                            animate={{ x: ['−100%', '200%'] }}
-                            transition={{ duration: 2.5, delay: 1.2, ease: 'easeInOut', repeat: Infinity, repeatDelay: 5 }}
-                            style={{
-                                position: 'absolute',
-                                inset: 0,
-                                background: 'linear-gradient(105deg, transparent 40%, rgba(196, 151, 106, 0.12) 50%, transparent 60%)',
-                                pointerEvents: 'none',
-                            }}
+                        <NextImage
+                            src="/images/Counsel Hero.jpeg"
+                            alt="Aileen Ingati Portrait"
+                            fill
+                            className="object-cover brightness-105"
                         />
-                        <span className="font-playfair text-white text-3xl font-bold">AAI</span>
-                        <span className="font-inter mt-2" style={{ color: '#C4976A', fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-                            Advocate · Scholar · Leader
-                        </span>
                     </motion.div>
 
                     {/* Portrait – mobile */}
@@ -142,16 +133,17 @@ export default function CounselSnapshot() {
                         variants={portraitVariants}
                         className="md:hidden flex flex-col items-center justify-center w-full mb-6 relative overflow-hidden"
                         style={{
-                            height: '200px',
-                            background: 'linear-gradient(160deg, #0f3324 0%, #0D2B1F 60%, #091f17 100%)',
+                            height: '350px',
                             borderRadius: '6px',
                             border: '1px solid rgba(160, 120, 74, 0.25)',
                         }}
                     >
-                        <span className="font-playfair text-white text-3xl font-bold">AAI</span>
-                        <span className="font-inter mt-2" style={{ color: '#C4976A', fontSize: '0.6rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-                            Advocate · Scholar · Leader
-                        </span>
+                        <NextImage
+                            src="/images/Counsel Hero.jpeg"
+                            alt="Aileen Ingati Portrait"
+                            fill
+                            className="object-cover brightness-105"
+                        />
                     </motion.div>
 
                     <motion.p

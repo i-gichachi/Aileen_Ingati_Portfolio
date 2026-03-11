@@ -86,10 +86,10 @@ export default function HeroSection({ profile }: { profile: Profile }) {
           {!imgError ? (
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
               <Image
-                src="/images/aileen-hero.jpg"
+                src="/images/Hero Image.jpeg"
                 alt={profile.name}
                 fill
-                className="object-cover object-[center_30%]"
+                className="object-cover object-[center_25%]"
                 priority
                 onError={() => setImgError(true)}
               />
@@ -294,8 +294,15 @@ export default function HeroSection({ profile }: { profile: Profile }) {
               overflow: 'hidden'
             }}
           >
-            <span style={{ fontFamily: 'var(--font-playfair-display)', color: C.white, fontSize: '4.5rem', fontWeight: 400, letterSpacing: '0.02em', lineHeight: 1, opacity: 0.9 }}>AAI</span>
-            <span style={{ fontFamily: 'var(--font-inter)', color: C.bronze, fontSize: '0.7rem', letterSpacing: '0.3em', textTransform: 'uppercase', marginTop: '0.5rem', opacity: 0.8 }}>Advocate · Scholar · Leader</span>
+            <Image
+              src="/images/Hero Image.jpeg"
+              alt={profile.name}
+              fill
+              className="object-cover object-[center_20%]"
+              priority
+            />
+            {/* Subtle overlay for depth */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 60%, rgba(13, 43, 31, 0.4) 100%)' }} />
           </motion.div>
         </div>
       </div>
