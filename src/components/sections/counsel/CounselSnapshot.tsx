@@ -133,7 +133,7 @@ export default function CounselSnapshot() {
                         variants={portraitVariants}
                         className="md:hidden flex flex-col items-center justify-center w-full mb-6 relative overflow-hidden"
                         style={{
-                            height: '280px',
+                            height: '420px',
                             borderRadius: '6px',
                             border: '1px solid rgba(160, 120, 74, 0.25)',
                         }}
@@ -142,7 +142,7 @@ export default function CounselSnapshot() {
                             src="/images/Counsel Hero.jpeg"
                             alt="Aileen Ingati Portrait"
                             fill
-                            className="object-cover brightness-105"
+                            className="object-cover object-[center_10%] brightness-105"
                         />
                     </motion.div>
 
