@@ -81,8 +81,8 @@ export default function HeroSection({ profile }: { profile: Profile }) {
       {/* ── MOBILE LAYOUT (flex column) ── */}
       <div className="md:hidden flex flex-col flex-1">
 
-        {/* Photo panel — top, offset below fixed navbar (80px) */}
-        <div style={{ position: 'relative', width: '100%', height: '35vh', minHeight: 300, maxHeight: 380, flexShrink: 0, paddingTop: '6rem' }}>
+        {/* Photo panel — top, offset below fixed navbar */}
+        <div style={{ position: 'relative', width: '100%', height: '40vh', minHeight: 320, maxHeight: 450, flexShrink: 0, paddingTop: '5.5rem' }}>
           {!imgError ? (
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
               <Image
@@ -274,7 +274,7 @@ export default function HeroSection({ profile }: { profile: Profile }) {
         </div>
 
         {/* FIX 1: Right panel — fully filled portrait rectangle panel */}
-        <div style={{ width: '45%', padding: 'clamp(1rem, 3vw, 2.5rem)', display: 'flex', alignItems: 'center' }}>
+        <div style={{ width: '45%', padding: 'clamp(6.5rem, 8vw, 8rem) clamp(1rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2.5rem)', display: 'flex', alignItems: 'stretch' }}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
