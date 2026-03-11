@@ -133,7 +133,7 @@ export default function CounselSnapshot() {
                         variants={portraitVariants}
                         className="md:hidden flex flex-col items-center justify-center w-full mb-6 relative overflow-hidden"
                         style={{
-                            height: '350px',
+                            height: '280px',
                             borderRadius: '6px',
                             border: '1px solid rgba(160, 120, 74, 0.25)',
                         }}

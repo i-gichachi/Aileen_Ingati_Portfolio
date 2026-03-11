@@ -82,14 +82,14 @@ export default function HeroSection({ profile }: { profile: Profile }) {
       <div className="md:hidden flex flex-col flex-1">
 
         {/* Photo panel — top, offset below fixed navbar */}
-        <div style={{ position: 'relative', width: '100%', height: '40vh', minHeight: 320, maxHeight: 450, flexShrink: 0, paddingTop: '5.5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '32vh', minHeight: 280, maxHeight: 400, flexShrink: 0, paddingTop: '5rem' }}>
           {!imgError ? (
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
               <Image
                 src="/images/Hero Image.jpeg"
                 alt={profile.name}
                 fill
-                className="object-cover object-[center_25%]"
+                className="object-cover object-[center_15%]"
                 priority
                 onError={() => setImgError(true)}
               />
@@ -108,10 +108,10 @@ export default function HeroSection({ profile }: { profile: Profile }) {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.15 }}
-          style={{ padding: '0 1.25rem 2.5rem', display: 'flex', flexDirection: 'column' }}
+          style={{ padding: '0 1.25rem 2rem', display: 'flex', flexDirection: 'column' }}
         >
           {/* Eyebrow */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
             <div style={{ width: '30px', height: '1px', backgroundColor: 'rgba(160, 120, 74, 0.4)' }} />
             <span style={{
               color: '#A0784A',
@@ -127,17 +127,17 @@ export default function HeroSection({ profile }: { profile: Profile }) {
           </div>
 
           {/* Name */}
-          <h1 style={{ fontFamily: 'var(--font-playfair-display)', color: C.white, fontSize: 'clamp(2.1rem, 10vw, 3rem)', lineHeight: 1.05, letterSpacing: '-0.02em', margin: '0 0 1rem 0' }}>
+          <h1 style={{ fontFamily: 'var(--font-playfair-display)', color: C.white, fontSize: 'clamp(1.8rem, 8vw, 2.5rem)', lineHeight: 1.1, letterSpacing: '-0.02em', margin: '0 0 0.75rem 0' }}>
             {profile.name}
           </h1>
 
           {/* Tagline */}
-          <p style={{ fontFamily: 'var(--font-inter)', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', lineHeight: 1.6, margin: '0 0 1.5rem 0', fontStyle: 'italic', fontWeight: 300, maxWidth: '95%' }}>
+          <p style={{ fontFamily: 'var(--font-inter)', color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', lineHeight: 1.5, margin: '0 0 1.25rem 0', fontStyle: 'italic', fontWeight: 300, maxWidth: '95%' }}>
             {profile.tagline}
           </p>
 
           {/* Pills */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.6rem', margin: '0 0 1.75rem 0' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '0.5rem', margin: '0 0 1.25rem 0' }}>
             {pills.map((p, i) => (
               <div key={p} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                 <span style={{ fontFamily: 'var(--font-inter)', fontSize: '0.68rem', color: C.bronzeLight, fontWeight: 500, letterSpacing: '0.04em' }}>{p}</span>
