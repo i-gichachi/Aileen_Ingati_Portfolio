@@ -256,7 +256,7 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'aluso-ingati-associates',
         matterNumber: 'Matter 05 of 05',
-        title: 'Founding a Multi-Practice Legal Firm Delivers 25% Efficiency Gain and Seven Years of Sustained Client Retention',
+        title: 'Founding a Litigation & Commercial Legal Firm Delivers 25% Efficiency Gain and Seven Years of Sustained Client Retention',
         organisation: 'Aluso Ingati and Associates Advocates',
         dateRange: 'June 2016 to March 2023',
         keyMetric: '25%',
