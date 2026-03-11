@@ -82,14 +82,14 @@ export default function HeroSection({ profile }: { profile: Profile }) {
       <div className="md:hidden flex flex-col flex-1">
 
         {/* Photo panel — top, offset below fixed navbar */}
-        <div style={{ position: 'relative', width: '100%', height: '32vh', minHeight: 280, maxHeight: 400, flexShrink: 0, paddingTop: '5rem' }}>
+        <div style={{ position: 'relative', width: '100%', height: '48vh', minHeight: 360, maxHeight: 500, flexShrink: 0, paddingTop: '5rem' }}>
           {!imgError ? (
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
               <Image
                 src="/images/Hero Image.jpeg"
                 alt={profile.name}
                 fill
-                className="object-cover object-[center_15%]"
+                className="object-cover object-[center_10%]"
                 priority
                 onError={() => setImgError(true)}
               />
