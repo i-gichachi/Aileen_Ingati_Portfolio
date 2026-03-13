@@ -32,4 +32,29 @@ export const institutions: Institution[] = [
         name: 'German Development Cooperation GIZ',
         logoPath: '/logos/German Development Cooperation (GIZ)_logo.png',
     },
+    {
+        id: 'aripo',
+        name: 'ARIPO',
+        logoPath: '/logos/ARIPO_logo.png',
+    },
+    {
+        id: 'cla',
+        name: 'Commonwealth Lawyers Association',
+        logoPath: '/logos/Commonwealth Lawyers Association_logo.png',
+    },
+    {
+        id: 'eals',
+        name: 'East Africa Law Society',
+        logoPath: '/logos/East Africa Law Society_logo.png',
+    },
+    {
+        id: 'ksl',
+        name: 'Kenya School of Law',
+        logoPath: '/logos/Kenya School of Law_logo.jfif',
+    },
+    {
+        id: 'lsk',
+        name: 'Law Society of Kenya',
+        logoPath: '/logos/LSK_logo.png',
+    },
 ]
